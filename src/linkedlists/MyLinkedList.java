@@ -125,7 +125,7 @@ public class MyLinkedList
 		return false;
 	}
 	
-	MyLinkedListNode mergeLinkedList(MyLinkedListNode L1, MyLinkedListNode L2)
+	public static MyLinkedListNode  mergeLinkedList(MyLinkedListNode L1, MyLinkedListNode L2)
 	{
 		MyLinkedListNode L3 = L1;
 		L1 = L1.next;
@@ -197,6 +197,9 @@ public class MyLinkedList
 		System.out.println("Is list 5 cricular::" + mylist5.isListCircular());
 		mylist5.pop();
 		System.out.println("Is list 5 cricular::" + mylist5.isListCircular());
+		
+		MyLinkedList mylist6 =  MyLinkedList.mergeLinkedList(mylist1,mylist2);
+		mylist6.printLinkedList();
 	}
 
 }
