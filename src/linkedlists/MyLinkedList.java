@@ -124,6 +124,27 @@ public class MyLinkedList
 		}
 		return false;
 	}
+	
+	MyLinkedListNode mergeLinkedList(MyLinkedListNode L1, MyLinkedListNode L2)
+	{
+		MyLinkedListNode L3 = L1;
+		L1 = L1.next;
+		/*L3.next = L2;
+		L2 = L2.next;*/
+		while( (L2 !=null) || (L1 != null))
+		{
+			if(L2 != null)
+			{
+				L3.next = L2;
+				L2 = L2.next;
+			}
+			if(L1 != null)
+			{
+				L3.next = L1;
+				L1 = L1.next;
+			}
+		}
+	}
 	/**
 	 * @param args
 	 */
