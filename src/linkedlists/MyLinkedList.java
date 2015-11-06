@@ -125,18 +125,20 @@ public class MyLinkedList
 		return false;
 	}
 	
-	public static MyLinkedListNode  mergeLinkedList(MyLinkedListNode L1, MyLinkedListNode L2)
+	public static MyLinkedList mergeLinkedList(MyLinkedListNode L1, MyLinkedListNode L2)
 	{
+		MyLinkedList L = new MyLinkedList();
 		MyLinkedListNode L3 = L1;
 		L1 = L1.nextNode;
 		/*L3.next = L2;
 		L2 = L2.next;*/
+		L.head = L3;
 		while( (L2 !=null) || (L1 != null))
 		{
 			if(L2 != null)
 			{
 				L3.nextNode = L2;
-				L2 = L2.nextNodet;
+				L2 = L2.nextNode;
 			}
 			if(L1 != null)
 			{
@@ -144,7 +146,7 @@ public class MyLinkedList
 				L1 = L1.nextNode;
 			}
 		}
-		return L3;
+		return L;
 	}
 	/**
 	 * @param args
@@ -198,7 +200,7 @@ public class MyLinkedList
 		mylist5.pop();
 		System.out.println("Is list 5 cricular::" + mylist5.isListCircular());
 		
-		MyLinkedList mylist6 =  MyLinkedList.mergeLinkedList(mylist1,mylist2);
+		MyLinkedList mylist6 =  MyLinkedList.mergeLinkedList(mylist.head,mylist2.head);
 		mylist6.printLinkedList();
 	}
 
