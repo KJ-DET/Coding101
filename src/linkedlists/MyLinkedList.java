@@ -128,20 +128,20 @@ public class MyLinkedList
 	public static MyLinkedListNode  mergeLinkedList(MyLinkedListNode L1, MyLinkedListNode L2)
 	{
 		MyLinkedListNode L3 = L1;
-		L1 = L1.next;
+		L1 = L1.nextNode;
 		/*L3.next = L2;
 		L2 = L2.next;*/
 		while( (L2 !=null) || (L1 != null))
 		{
 			if(L2 != null)
 			{
-				L3.next = L2;
-				L2 = L2.next;
+				L3.nextNode = L2;
+				L2 = L2.nextNodet;
 			}
 			if(L1 != null)
 			{
-				L3.next = L1;
-				L1 = L1.next;
+				L3.nextNode = L1;
+				L1 = L1.nextNode;
 			}
 		}
 		return L3;
