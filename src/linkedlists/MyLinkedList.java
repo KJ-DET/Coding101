@@ -144,6 +144,7 @@ public class MyLinkedList
 				L1 = L1.next;
 			}
 		}
+		return L3;
 	}
 	/**
 	 * @param args
